@@ -87,7 +87,6 @@ fn main() {
                     continue;
                 }
             }
-            _ => {} // Other cases ("Too small!" and "Too big!") remain unchanged.
         }
     }
 }
