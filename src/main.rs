@@ -58,21 +58,15 @@ fn main() {
         match guess.cmp(&secret_number) {
             Ordering::Less => {
                 println!("{}", "Too small!".red().bold());
-                if secret_number - guess <= 15 || guess - secret_number <= 15 {
-                    println!("{}", "Hint: You are close! 🔥".yellow().bold());
-                }
-                else {
-                    println!("{}", "Hint: You are far!".blue().bold());
+                if secret_number - guess > 20 {
+                    println!("{}", "Hint: You're way too low!".yellow().bold());
                 }
             }
            
             Ordering::Greater => {
                 println!("{}", "Too big!".red().bold());
-                if guess - secret_number <= 15 || secret_number - guess <= 15 {
-                    println!("{}", "Hint: You are close! 🔥".yellow().bold());
-                }
-                else {
-                    println!("{}", "Hint: You are far!".blue().bold());
+                if guess - secret_number > 20 {
+                    println!("{}", "Hint: You're way too high!".yellow().bold());
                 }
             }
             Ordering::Equal => {
