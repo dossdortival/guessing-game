@@ -1,64 +1,159 @@
-# 🎯 Guessing The Number Game
+# 🎯 Guessing The Number Game 🎮
 
 ## 📝 Description
 
-Welcome to Guessing The Number Game, a simple and fun command-line game built with Rust! The goal of the game is to guess a randomly generated number between 1 and 100. With each guess, the game provides feedback to help you get closer to the correct number.
+Welcome to the **Guessing Game**! This is a simple and fun command-line game where you guess a randomly generated number within a specified range. The game provides hints to help you find the correct number, and you can play as many times as you like.
 
-## 🎮 How to Play
+---
 
-1. Run the game in your terminal.
+## Table of Contents
 
-2. The game will generate a random number between 1 and 100.
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [How to Play](#how-to-play)
+- [Contributing](#contributing)
+- [License](#license)
 
-3. Enter your guess and press Enter.
+---
 
-4. The game will provide feedback:
+## Features ✨
 
-  - Too small! 🔴 if your guess is lower than the target number.
-  
-  - Too big! 🔴 if your guess is higher than the target number.
-  
-  - BINGO, You Win! 🎉 if you guess the correct number.
+- **Custom Range**: Specify your own minimum and maximum values for the guessing range.
+- **Colored Output**: Enjoy a colorful command-line interface (can be disabled).
+- **Hints**: Get hints like "Too small!", "Too big!", or "You are close!" to guide your guesses.
+- **Play Again**: After winning, you can choose to play again or exit the game.
 
-5. The game will also give you hints if you're way off.
+---
 
-6. Keep guessing until you win! The game tracks the number of attempts.
+## Installation 🛠️
 
-7. After winning, you can choose to play again or exit. 
+### Prerequisites
 
-## 🔧 Requirements
+- [Rust](https://www.rust-lang.org/tools/install) installed on your system.
 
-Rust installed on your system. You can install it using Rustup.
+### Steps
 
+1. Clone the repository:
 
-## ▶️ Installing and Running the Game
-   If you haven't already, clone the project from GitHub:
-   ```sh
-   git clone https://github.com/dossdortival/Rust-guessing-game.git
-   
-   cd Rust-guessing-game
-   
+   ```bash
+   git clone https://github.com/dossdortival/guessing-game.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd guessing-game
+   ```
+
+3. Build the project:
+
+   ```bash
    cargo build --release
-   
-   cargo run
-   ``` 
+   ```
 
-# 📌 Features
+4. (Optional) Install the game globally:
 
-- Random number generation between 1 and 100.
+   ```bash
+   cargo install --path .
+   ```
 
-- Input validation to ensure only valid numbers are entered.
+---
 
-- Hint system to guide you when you're far off.
+## Usage 🚀
 
-- Guess counter to track the number of attempts.
+### Running the Game
 
-- Replay option after winning.
+You can run the game in two ways:
 
-- Colorized output for better readability.
+1. **Locally** (without installing):
 
-## 📜 License
+   ```bash
+   cargo run -- <min> <max>
+   ```
 
-This project is open-source and available under the MIT License.
+   Example:
 
-Happy guessing! 🎲
+   ```bash
+   cargo run -- 1 100
+   ```
+
+2. **Globally** (after installing):
+
+   ```bash
+   guessing-game <min> <max>
+   ```
+
+   Example:
+
+   ```bash
+   guessing-game 1 100
+   ```
+
+### Command-Line Arguments
+
+| Argument      | Description                                      | Default |
+|---------------|--------------------------------------------------|---------|
+| `<min>`       | The minimum number in the range.                 | `1`     |
+| `<max>`       | The maximum number in the range.                 | `100`   |
+| `--no-color`  | Disable colored output.                          | `false` |
+
+Example with all options:
+
+```bash
+guessing-game 10 50 --no-color
+```
+
+---
+
+## How to Play 🎲
+
+1. **Start the Game**:
+   - Run the game with your desired range (e.g., `1 100`).
+
+2. **Guess the Number**:
+   - Enter your guess when prompted.
+   - The game will tell you if your guess is too small, too big, or correct.
+
+3. **Use Hints**:
+   - If your guess is close to the secret number, you'll get a hint like "You are close! 🔥".
+
+4. **Win the Game**:
+   - When you guess the correct number, you'll see a victory message with the number of attempts it took.
+
+5. **Play Again**:
+   - After winning, you can choose to play again or exit the game.
+
+---
+
+## Contributing 🤝
+
+We welcome contributions! If you'd like to contribute to this project, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix.
+3. Make your changes and commit them.
+4. Push your changes to your fork.
+5. Submit a pull request.
+
+Please ensure your code follows the project's style and includes appropriate tests.
+
+---
+
+## License 📄
+
+This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments 🙏
+
+- Built with [Rust](https://www.rust-lang.org/).
+- Uses the [clap](https://crates.io/crates/clap) crate for command-line argument parsing.
+- Inspired by the classic number-guessing game from "The Book".
+
+---
+
+Enjoy the game! 🚀 If you have any questions or feedback, feel free to open an issue or reach out.
+
+---
