@@ -1,8 +1,8 @@
-# 🎯 Guessing The Number Game 🎮
+# 🎯 The Number Guessing Game 🎮
 
 ## 📝 Description
 
-Welcome to the **Guessing Game**! This is a simple and fun command-line game where you guess a randomly generated number within a specified range. The game provides hints to help you find the correct number, and you can play as many times as you like.
+Welcome to the **Number Guessing Game**! This is a simple and fun command-line game where you guess a randomly generated number within a specified range. The game provides hints to help you find the correct number, and you can play as many times as you like.
 
 ## Table of Contents
 
@@ -31,13 +31,13 @@ Welcome to the **Guessing Game**! This is a simple and fun command-line game whe
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/dossdortival/guessing-game.git
+   git clone https://github.com/dossdortival/number-guessing.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd guessing-game
+   cd number-guessing
    ```
 
 3. Build the project:
@@ -80,19 +80,19 @@ You can run the game in two ways:
 2. **Globally** (after installing):
 
    ```bash
-   guessing-game <min> <max>
+   number-guessing <min> <max>
    ```
 
    Example 1 (default):
 
    ```bash
-   guessing-game
+   number-guessing
    ```
 
       Example 2:
 
    ```bash
-   guessing-game 100 500
+   number-guessing 100 500
 
 ### Command-Line Arguments
 
@@ -105,7 +105,7 @@ You can run the game in two ways:
 Example with all options:
 
 ```bash
-guessing-game 100 500 --no-color
+number-guessing 100 500 --no-color
 ```
  
 ## How to Play 🎲
