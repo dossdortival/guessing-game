@@ -2,6 +2,13 @@
 name = "guessing-game"
 version = "1.0.0"
 edition = "2021"
+authors = ["Dortival <dossunit@gmail.com>"]
+description = "A fun command-line number guessing game."
+license = "MIT" 
+repository = "https://github.com/dossdortival/guessing-game"
+keywords = ["game", "cli", "guessing"]
+categories = ["command-line-utilities", "games"]
+readme = "README.md"
 
 [dependencies]
 rand = "0.8.5" 
